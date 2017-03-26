@@ -15,8 +15,8 @@ There will be a backend control panel for managing posts and admins, this guide 
 
 ## Installation
 ```
-git clone https://github.com/mdshohelrana/personal-blog-site.git
-cd personal-blog-site
+git clone https://github.com/mdshohelrana/myblog.git
+cd myblog
 composer install
 copy .env.example .env
 php artisan key:generate
