@@ -176,7 +176,7 @@ return [
         // myblog\Providers\BroadcastServiceProvider::class,
         myblog\Providers\EventServiceProvider::class,
         myblog\Providers\RouteServiceProvider::class,
-
+        Laravel\Scout\ScoutServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class
 
     ],
