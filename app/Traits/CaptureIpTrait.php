@@ -1,6 +1,6 @@
 <?php
 
-namespace myblog\Traits;
+namespace App\Traits;
 
 class CaptureIpTrait {
 

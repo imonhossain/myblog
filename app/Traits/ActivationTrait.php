@@ -1,9 +1,9 @@
 <?php
 
-namespace myblog\Traits;
+namespace App\Traits;
 
-use myblog\Logic\Activation\ActivationRepository;
-use myblog\Models\User;
+use App\Logic\Activation\ActivationRepository;
+use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 
 trait ActivationTrait

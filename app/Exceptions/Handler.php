@@ -1,8 +1,9 @@
 <?php
 
-namespace myblog\Exceptions;
+namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -44,6 +45,16 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+
+// Add LOG HERE
+        if ($exception instanceof \jeremykenedy\LaravelRoles\Exceptions\LevelDeniedException) {
+
+// ADD FLASH AND REDIRECT HERE
+
+            return redirect()->back();
+
+        }
+
         return parent::render($request, $exception);
     }
 

@@ -1,8 +1,12 @@
 <?php
 
-namespace myblog\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -25,7 +29,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+
+    protected $redirectAfterLogout = '/';
 
     /**
      * Create a new controller instance.
@@ -36,4 +41,20 @@ class LoginController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
+
+
+    /**
+     * Logout, Clear Session, and Return.
+     *
+     * @return void
+     */
+    public function logout()
+    {
+        $user = Auth::user();
+        Log::info('User Logged Out. ', [$user]);
+        Auth::logout();
+        Session::flush();
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
+    }
+
 }

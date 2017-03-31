@@ -171,11 +171,20 @@ return [
         /*
          * Application Service Providers...
          */
-        myblog\Providers\AppServiceProvider::class,
-        myblog\Providers\AuthServiceProvider::class,
-        // myblog\Providers\BroadcastServiceProvider::class,
-        myblog\Providers\EventServiceProvider::class,
-        myblog\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
+
+        // Laravel\Socialite\SocialiteServiceProvider::class,
+        SocialiteProviders\Manager\ServiceProvider::class,
+        SocialiteProviders\Generators\GeneratorsServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Illuminate\Notifications\NotificationServiceProvider::class,
+        App\Providers\MacroServiceProvider::class,
+        jeremykenedy\LaravelRoles\RolesServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
     ],
 
@@ -226,6 +235,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Form'      => \Collective\Html\FormFacade::class,
+        'HTML'      => \Collective\Html\HtmlFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Input' => Illuminate\Support\Facades\Input::class,
     ],
 
 ];
