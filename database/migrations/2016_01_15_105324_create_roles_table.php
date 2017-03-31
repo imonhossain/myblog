@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateRolesTable extends Migration
 {
@@ -14,11 +13,12 @@ class CreateRolesTable extends Migration
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('name');
-            $table->string('display_name');
-            $table->string('description');
-            $table->integer('permissions_level')->unsigned();
+            $table->string('slug')->unique();
+            $table->string('description')->nullable();
+            $table->integer('level')->default(1);
+            $table->timestamps();
         });
     }
 
