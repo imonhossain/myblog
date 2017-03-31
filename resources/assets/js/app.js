@@ -15,6 +15,12 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
-    el: '#app'
+// const app = new Vue({
+//     el: '#app'
+// });
+
+$.fn.extend({
+	toggleText: function(a, b){
+	  	return this.text(this.text() == b ? a : b);
+	}
 });
