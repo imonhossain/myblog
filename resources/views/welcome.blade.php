@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html class="no-js" lang="{{ config('app.locale') }}">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Personal blog site</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
