@@ -16,7 +16,7 @@ class ThemesTableSeeder extends Seeder
 		$themes = [
 			[
 				'name'	=> 'Default',
-				'link' 	=> 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css',
+				'link' 	=> 'null',
 			],
 			[
 				'name'	=> 'Darkly',
