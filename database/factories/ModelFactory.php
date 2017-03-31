@@ -9,45 +9,16 @@
 | you a convenient way to create models for testing and seeding your
 | database. Just tell the factory how a default model should look.
 |
- */
+*/
 
-$factory->define(myblog\Models\User::class, function (Faker\Generator $faker) {
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\User::class, function (Faker\Generator $faker) {
+    static $password;
+
     return [
-        'first_name' => $faker->name,
-        'last_name' => $faker->name,
-        'display_name' => $faker->name,
-        'slug' => $faker->unique()->word,
+        'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'password' => bcrypt('secret'),
+        'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-    ];
-});
-
-$factory->define(myblog\Models\Category::class, function (Faker\Generator $faker) {
-    return [
-        'name' => $name = $faker->unique()->word,
-        'slug' => str_slug($name),
-    ];
-});
-
-$factory->define(myblog\Models\Tag::class, function (Faker\Generator $faker) {
-    return [
-        'name' => $name = $faker->unique()->word,
-        'slug' => str_slug($name),
-    ];
-});
-
-$factory->define(myblog\Models\Article::class, function ($faker) use ($factory) {
-
-    return [
-        'author_id' => 1,
-        'category_id' => 1,
-        'title' => $title = $faker->sentence,
-        'slug' => str_slug($title),
-        'subtitle' => $faker->sentence,
-        'content' => $faker->paragraph(10),
-        'article_image' => '',
-        'is_published' => true,
-        'published_at' => date('Y-m-d H:i:s'),
     ];
 });
