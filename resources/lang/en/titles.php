@@ -17,13 +17,12 @@ return [
 	'activation'	=> 'Registration Started  | Activation Required',
 	'exceeded'		=> 'Activation Error',
 
-	'editProfile'	=> 'Edit Profile',
-	'createProfile'	=> 'Create Profile',
 	'adminUserList'	=> 'Users Administration',
 	'adminEditUsers'=> 'Edit Users',
 	'adminNewUser'	=> 'Create New User',
 
 	'adminThemesList' => 'Themes',
 	'adminThemesAdd'  => 'Add New Theme',
+    'adminCategory' => 'Categories'
 
 ];
