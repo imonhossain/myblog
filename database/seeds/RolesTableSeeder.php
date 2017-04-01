@@ -24,9 +24,18 @@ class RolesTableSeeder extends Seeder
 	            'name' => 'Admin',
 	            'slug' => 'admin',
 	            'description' => 'Admin Role',
-	            'level' => 5,
+	            'level' => 3,
         	]);
 	    }
+
+        if (Role::where('name', '=', 'Editor')->first() === null) {
+            $userRole = Role::create([
+                'name' => 'Editor',
+                'slug' => 'editor',
+                'description' => 'Editor Role',
+                'level' => 2,
+            ]);
+        }
 
     	if (Role::where('name', '=', 'User')->first() === null) {
 	        $userRole = Role::create([

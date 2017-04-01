@@ -20,7 +20,7 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
 	$userRole = Role::whereName('User')->first();
 
     return [
-		'name'          => $faker->unique()->userName,
+		'username'      => $faker->unique()->userName,
 		'first_name'    => $faker->firstName,
 		'last_name'     => $faker->lastName,
 		'email' 		=> $faker->unique()->safeEmail,

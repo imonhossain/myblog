@@ -22,13 +22,14 @@ class UsersTableSeeder extends Seeder
         $faker = Faker\Factory::create();
         $profile = new Profile;
         $adminRole = Role::whereName('Admin')->first();
+        $editorRole = Role::whereName('Editor')->first();
         $userRole = Role::whereName('User')->first();
 
         // Seed test admin
         $user = User::where('email', '=', 'admin@admin.com')->first();
         if ($user === null) {
             $user = User::create(array(
-                'name'              => $faker->userName,
+                'username'          => $faker->userName,
                 'first_name'        => $faker->firstName,
                 'last_name'         => $faker->lastName,
                 'email'             => 'admin@admin.com',
@@ -45,11 +46,31 @@ class UsersTableSeeder extends Seeder
 
         }
 
+        // Seed test editor
+        $user = User::where('email', '=', 'editor@editor.com')->first();
+        if ($user === null) {
+            $user = User::create(array(
+                'username'          => $faker->userName,
+                'first_name'        => $faker->firstName,
+                'last_name'         => $faker->lastName,
+                'email'             => 'editor@editor.com',
+                'password'          => Hash::make('password'),
+                'token'             => str_random(64),
+                'activated'         => true,
+                'signup_ip_address' => $faker->ipv4,
+                'signup_confirmation_ip_address' => $faker->ipv4
+            ));
+
+            $user->profile()->save(new Profile);
+            $user->attachRole($editorRole);
+            $user->save();
+        }
+
         // Seed test user
         $user = User::where('email', '=', 'user@user.com')->first();
         if ($user === null) {
             $user = User::create(array(
-                'name'              => $faker->userName,
+                'username'          => $faker->userName,
                 'first_name'        => $faker->firstName,
                 'last_name'         => $faker->lastName,
                 'email'             => 'user@user.com',
@@ -65,14 +86,6 @@ class UsersTableSeeder extends Seeder
             $user->save();
         }
 
-        // Seed test users
-        // $user = factory(App\Models\Profile::class, 5)->create();
-        // $users = User::All();
-        // foreach ($users as $user) {
-        //     if (!($user->isAdmin()) && !($user->isUnverified())) {
-        //         $user->attachRole($userRole);
-        //     }
-        // }
 
     }
 }

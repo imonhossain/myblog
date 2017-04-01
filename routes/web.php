@@ -87,4 +87,6 @@ Route::group(['middleware'=> ['auth', 'activated', 'role:admin']], function () {
         ]
     ]);
 
+    Route::resource('dashboard/categories', 'Backend\CategoryController');
+
 });
