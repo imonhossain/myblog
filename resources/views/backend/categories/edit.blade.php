@@ -3,7 +3,7 @@
 @section('backend-content')
     <h2>Create New Category</h2>
 
-    {{ Form::open(['url'=>'dashboard/categories']) }}
+    {{ Form::model($category,['url'=>'dashboard/categories/'.$category->id,'method'=>'PATCH']) }}
     <div class="form-group">
         {{ Form::label('name', 'Name:') }}
         {{ Form::text('name', null, ['class'=>'form-control']) }}
@@ -13,9 +13,10 @@
         {{ Form::text('slug', null, ['class'=>'form-control']) }}
     </div>
     <div class="form-group">
-        <button class="btn btn-primary" type="submit">Create</button>
+        <button class="btn btn-primary" type="submit">Update</button>
         <a href="{{url('dashboard/categories')}}" class="btn btn-warning" role="button">Cancel</a>
     </div>
     {{ Form::close() }}
+
 
 @endsection

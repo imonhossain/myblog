@@ -51,6 +51,10 @@ Route::group(['middleware' => ['auth', 'activated']], function() {
         'uses'      => 'ProfilesController@show'
     ]);
 
+    Route::group(['namespace' => 'Backend', 'prefix' => 'dashboard'], function (){
+       Route::resource('articles', 'ArticleController');
+    });
+
 });
 
 // Registered, activated, and is current user routes.
@@ -86,7 +90,9 @@ Route::group(['middleware'=> ['auth', 'activated', 'role:admin']], function () {
             'destroy' => 'themes.destroy'
         ]
     ]);
+    Route::group(['namespace' => 'Backend', 'prefix' => 'dashboard'], function (){
+        Route::resource('categories', 'CategoryController');
+    });
 
-    Route::resource('dashboard/categories', 'Backend\CategoryController');
 
 });

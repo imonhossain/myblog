@@ -1,0 +1,10 @@
+table.table {
+
+  td:last-child{
+    width: calc(14%);
+    text-align: center;
+    form{
+      display: inline;
+    }
+  }
+}

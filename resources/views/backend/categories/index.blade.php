@@ -9,7 +9,7 @@
     </h2>
 
     <div>
-        <table class="table">
+        <table class="table table-hover table-responsive">
             <thead>
             <tr>
                 <th>Id</th>

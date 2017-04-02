@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Requests\Article\ArticleCreateRequest;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Tag;
@@ -40,12 +41,28 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Article\ArticleCreateRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleCreateRequest $request)
     {
-        //
+        $article = new Article([
+            'author_id' => $request->input('author_id'),
+            'category_id' => $request->input('category_id'),
+            'slug' => $request->input('slug'),
+            'title' => $request->input('title'),
+            'subtitle' => $request->input('subtitle'),
+            'content' => $request->input('content'),
+            'article_image' => $request->input('article_image'),
+            'meta_keywords' => $request->input('meta_keywords'),
+            'meta_description' => $request->input('meta_description'),
+            'published_at' => $request->input('published_at'),
+            'is_published' => $request->input('is_published')
+        ]);
+
+        $article->save();
+
+        return redirect('dashboard/articles')->with('success', 'Article has been created successfully.');
     }
 
     /**
