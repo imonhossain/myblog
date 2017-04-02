@@ -14,7 +14,7 @@ class ArticleCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->hasRole('editor');
+        return Auth::user()->hasRole('admin', 'editor');
     }
 
     /**
@@ -27,7 +27,7 @@ class ArticleCreateRequest extends FormRequest
         return [
             'title' => 'required|unique:articles',
             'slug' => 'required|unique:articles',
-            'category' => 'required',
+            'category_id' => 'required',
             'author_id' => 'required',
             'content' => 'required',
         ];

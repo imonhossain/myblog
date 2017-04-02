@@ -28,6 +28,7 @@
                             <li>{!! HTML::link(url('/users'), Lang::get('titles.adminUserList')) !!}</li>
                             <li>{!! HTML::link(url('/users/create'), Lang::get('titles.adminNewUser')) !!}</li>
                             <li>{!! HTML::link(url('/themes'), Lang::get('titles.adminThemesList')) !!}</li>
+                            <li>{!! HTML::link(url('/dashboard/articles'), Lang::get('titles.adminArticle')) !!}</li>
                             <li>{!! HTML::link(url('/dashboard/categories'), Lang::get('titles.adminCategory')) !!}</li>
                         </ul>
                     </li>

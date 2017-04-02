@@ -23,6 +23,7 @@ return [
 
 	'adminThemesList' => 'Themes',
 	'adminThemesAdd'  => 'Add New Theme',
+	'adminArticle'  => 'Articles',
     'adminCategory' => 'Categories'
 
 ];
