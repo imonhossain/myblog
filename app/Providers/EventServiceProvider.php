@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Providers;
+namespace Myblog\Providers;
 
-use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
+/**
+ * Class EventServiceProvider.
+ */
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -12,16 +14,32 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
-    protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
-        ],
-        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            'SocialiteProviders\YouTube\YouTubeExtendSocialite@handle',
-            'SocialiteProviders\Twitch\TwitchExtendSocialite@handle',
-            'SocialiteProviders\Instagram\InstagramExtendSocialite@handle',
-            'SocialiteProviders\ThirtySevenSignals\ThirtySevenSignalsExtendSocialite@handle',
-        ],
+    protected $listen = [];
+
+    /**
+     * Class event subscribers.
+     *
+     * @var array
+     */
+    protected $subscribe = [
+        /*
+         * Frontend Subscribers
+         */
+
+        /*
+         * Auth Subscribers
+         */
+        \Myblog\Listeners\Frontend\Auth\UserEventListener::class,
+
+        /*
+         * Backend Subscribers
+         */
+
+        /*
+         * Access Subscribers
+         */
+        \Myblog\Listeners\Backend\Access\User\UserEventListener::class,
+        \Myblog\Listeners\Backend\Access\Role\RoleEventListener::class,
     ];
 
     /**

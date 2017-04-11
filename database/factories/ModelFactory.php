@@ -1,6 +1,8 @@
 <?php
 
-use jeremykenedy\LaravelRoles\Models\Role;
+use Faker\Generator;
+use Myblog\Models\Access\Role\Role;
+use Myblog\Models\Access\User\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,34 +15,70 @@ use jeremykenedy\LaravelRoles\Models\Role;
 |
 */
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\Models\User::class, function (Faker\Generator $faker) {
-
+$factory->define(User::class, function (Generator $faker) {
     static $password;
-	$userRole = Role::whereName('User')->first();
 
     return [
-		'username'      => $faker->unique()->userName,
-		'first_name'    => $faker->firstName,
-		'last_name'     => $faker->lastName,
-		'email' 		=> $faker->unique()->safeEmail,
-		'password' 		=> $password ?: $password = bcrypt('secret'),
-		'token'         => str_random(64),
-		'activated'     => true,
-        'remember_token' => str_random(10),
-        'signup_ip_address' => $faker->ipv4,
-        'signup_confirmation_ip_address' => $faker->ipv4
+        'name'              => $faker->name,
+        'email'             => $faker->safeEmail,
+        'password'          => $password ?: $password = bcrypt('secret'),
+        'remember_token'    => str_random(10),
+        'confirmation_code' => md5(uniqid(mt_rand(), true)),
     ];
-
 });
 
-$factory->define(App\Models\Profile::class, function (Faker\Generator $faker) {
+$factory->state(User::class, 'active', function () {
     return [
-	    'user_id' => factory(App\Models\User::class)->create()->id,
-		'theme_id' => 1,
-		'location' => $faker->streetAddress,
-		'bio' => $faker->paragraph(2,true),
-		'twitter_username' => $faker->userName,
-		'github_username' => $faker->userName,
+        'status' => 1,
+    ];
+});
+
+$factory->state(User::class, 'inactive', function () {
+    return [
+        'status' => 0,
+    ];
+});
+
+$factory->state(User::class, 'confirmed', function () {
+    return [
+        'confirmed' => 1,
+    ];
+});
+
+$factory->state(User::class, 'unconfirmed', function () {
+    return [
+        'confirmed' => 0,
+    ];
+});
+
+/*
+ * Roles
+ */
+$factory->define(Role::class, function (Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'all'  => 0,
+        'sort' => $faker->numberBetween(1, 100),
+    ];
+});
+
+$factory->state(Role::class, 'admin', function () {
+    return [
+        'all' => 1,
+    ];
+});
+
+$factory->define(Myblog\Models\Blog\Article::class, function ($faker) use ($factory) {
+
+    return [
+        'author_id' => 1,
+        'category_id' => 1,
+        'title' => $title = $faker->sentence,
+        'slug' => str_slug($title),
+        'subtitle' => $faker->sentence,
+        'content' => $faker->paragraph(10),
+        'article_image' => '',
+        'is_published' => true,
+        'published_at' => date('Y-m-d H:i:s'),
     ];
 });

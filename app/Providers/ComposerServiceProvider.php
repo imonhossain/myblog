@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Providers;
+namespace Myblog\Providers;
 
 use Illuminate\Support\Facades\View;
+use Myblog\Http\Composers\GlobalComposer;
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class ComposerServiceProvider.
+ */
 class ComposerServiceProvider extends ServiceProvider
 {
     /**
@@ -14,11 +18,21 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        /*
+         * Global
+         */
         View::composer(
-            'layouts.app', 'App\Http\ViewComposers\ThemeComposer'
+            // This class binds the $logged_in_user variable to every view
+            '*', GlobalComposer::class
         );
 
+        /*
+         * Frontend
+         */
+
+        /*
+         * Backend
+         */
     }
 
     /**

@@ -1,47 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>404 | Not Found.</title>
+<head>
+    <meta charset="utf-8">
+    <title>{{ trans('http.404.title') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
 
-        <style>
-            html, body {
-                height: 100%;
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            color: #555;
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 280px;
+        }
+
+        @media only screen and (max-width: 280px) {
+
+            body, p {
+                width: 95%;
             }
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
             }
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Not found.</div>
-            </div>
-        </div>
-    </body>
+        }
+    </style>
+</head>
+<body>
+<h1>{{ trans('http.404.title') }}</h1>
+<p>{{ trans('http.404.description') }}</p>
+</body>
 </html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->

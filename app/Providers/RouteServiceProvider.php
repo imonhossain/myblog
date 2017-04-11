@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Providers;
+namespace Myblog\Providers;
 
+use Myblog\Models\Access\User\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
+/**
+ * Class RouteServiceProvider.
+ */
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -14,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = 'Myblog\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -23,7 +27,19 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /*
+         * Register route model bindings
+         */
+
+        /*
+         * This allows us to use the Route Model Binding with SoftDeletes on
+         * On a model by model basis
+         */
+        $this->bind('deletedUser', function ($value) {
+            $user = new User();
+
+            return User::withTrashed()->where($user->getRouteKeyName(), $value)->first();
+        });
 
         parent::boot();
     }
