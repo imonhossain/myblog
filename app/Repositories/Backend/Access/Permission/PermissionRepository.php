@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Repositories\Backend\Access\Permission;
+namespace App\Repositories\Backend\Access\Permission;
 
-use Myblog\Repositories\BaseRepository;
-use Myblog\Models\Access\Permission\Permission;
+use App\Repositories\BaseRepository;
+use App\Models\Access\Permission\Permission;
 
 /**
  * Class PermissionRepository.

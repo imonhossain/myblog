@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\User;
+namespace App\Http\Controllers\Frontend\User;
 
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 /**
  * Class AccountController.

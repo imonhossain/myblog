@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Frontend;
 
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 /**
  * Class FrontendController.

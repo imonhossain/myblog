@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Repositories\Backend\History;
+namespace App\Repositories\Backend\History;
 
 /**
  * Interface HistoryContract.

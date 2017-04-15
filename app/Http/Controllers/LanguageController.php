@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Http\Controllers;
+namespace App\Http\Controllers;
 
 /**
  * Class LanguageController.

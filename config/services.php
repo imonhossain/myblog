@@ -1,6 +1,6 @@
 <?php
 
-use Myblog\Models\Access\User\User;
+use App\Models\Access\User\User;
 
 return [
 

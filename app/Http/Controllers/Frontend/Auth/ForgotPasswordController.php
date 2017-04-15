@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 /**

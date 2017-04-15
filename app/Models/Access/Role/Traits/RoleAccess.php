@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Models\Access\Role\Traits;
+namespace App\Models\Access\Role\Traits;
 
 /**
  * Class RoleAccess.

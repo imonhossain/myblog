@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Requests\Backend\Access\User;
+namespace App\Http\Requests\Backend\Access\User;
 
-use Myblog\Http\Requests\Request;
+use App\Http\Requests\Request;
 
 /**
  * Class UpdateUserRequest.

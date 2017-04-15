@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Helpers\Macros\Traits;
+namespace App\Helpers\Macros\Traits;
 
 /**
  * Class Dropdowns.

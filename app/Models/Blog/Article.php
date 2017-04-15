@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Models\blog;
+namespace App\Models\blog;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;

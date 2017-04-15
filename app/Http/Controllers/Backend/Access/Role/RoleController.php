@@ -1,14 +1,14 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend\Access\Role;
+namespace App\Http\Controllers\Backend\Access\Role;
 
-use Myblog\Models\Access\Role\Role;
-use Myblog\Http\Controllers\Controller;
-use Myblog\Repositories\Backend\Access\Role\RoleRepository;
-use Myblog\Http\Requests\Backend\Access\Role\StoreRoleRequest;
-use Myblog\Http\Requests\Backend\Access\Role\ManageRoleRequest;
-use Myblog\Http\Requests\Backend\Access\Role\UpdateRoleRequest;
-use Myblog\Repositories\Backend\Access\Permission\PermissionRepository;
+use App\Models\Access\Role\Role;
+use App\Http\Controllers\Controller;
+use App\Repositories\Backend\Access\Role\RoleRepository;
+use App\Http\Requests\Backend\Access\Role\StoreRoleRequest;
+use App\Http\Requests\Backend\Access\Role\ManageRoleRequest;
+use App\Http\Requests\Backend\Access\Role\UpdateRoleRequest;
+use App\Repositories\Backend\Access\Permission\PermissionRepository;
 
 /**
  * Class RoleController.

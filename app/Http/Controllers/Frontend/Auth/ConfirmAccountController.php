@@ -1,11 +1,11 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
-use Myblog\Models\Access\User\User;
-use Myblog\Http\Controllers\Controller;
-use Myblog\Repositories\Frontend\Access\User\UserRepository;
-use Myblog\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use App\Models\Access\User\User;
+use App\Http\Controllers\Controller;
+use App\Repositories\Frontend\Access\User\UserRepository;
+use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class ConfirmAccountController.

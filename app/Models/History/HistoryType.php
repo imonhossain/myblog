@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Models\History;
+namespace App\Models\History;
 
 use Illuminate\Database\Eloquent\Model;
 

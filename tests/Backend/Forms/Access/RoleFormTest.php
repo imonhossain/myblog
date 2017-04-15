@@ -1,12 +1,12 @@
 <?php
 
 use Tests\BrowserKitTestCase;
-use Myblog\Models\Access\Role\Role;
+use App\Models\Access\Role\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
-use Myblog\Events\Backend\Access\Role\RoleCreated;
-use Myblog\Events\Backend\Access\Role\RoleDeleted;
-use Myblog\Events\Backend\Access\Role\RoleUpdated;
+use App\Events\Backend\Access\Role\RoleCreated;
+use App\Events\Backend\Access\Role\RoleDeleted;
+use App\Events\Backend\Access\Role\RoleUpdated;
 
 /**
  * Class RoleFormTest.

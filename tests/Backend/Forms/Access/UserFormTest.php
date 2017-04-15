@@ -1,14 +1,14 @@
 <?php
 
 use Tests\BrowserKitTestCase;
-use Myblog\Models\Access\User\User;
+use App\Models\Access\User\User;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Notification;
-use Myblog\Events\Backend\Access\User\UserCreated;
-use Myblog\Events\Backend\Access\User\UserDeleted;
-use Myblog\Events\Backend\Access\User\UserUpdated;
-use Myblog\Events\Backend\Access\User\UserPasswordChanged;
-use Myblog\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use App\Events\Backend\Access\User\UserCreated;
+use App\Events\Backend\Access\User\UserDeleted;
+use App\Events\Backend\Access\User\UserUpdated;
+use App\Events\Backend\Access\User\UserPasswordChanged;
+use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class UserFormTest.

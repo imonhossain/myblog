@@ -1,7 +1,7 @@
 <?php
 
-use Myblog\Models\Access\Role\Role;
-use Myblog\Models\Access\Permission\Permission;
+use App\Models\Access\Role\Role;
+use App\Models\Access\Permission\Permission;
 
 return [
     /*

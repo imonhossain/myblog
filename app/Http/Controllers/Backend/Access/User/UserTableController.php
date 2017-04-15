@@ -1,11 +1,11 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend\Access\User;
+namespace App\Http\Controllers\Backend\Access\User;
 
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Yajra\Datatables\Facades\Datatables;
-use Myblog\Repositories\Backend\Access\User\UserRepository;
-use Myblog\Http\Requests\Backend\Access\User\ManageUserRequest;
+use App\Repositories\Backend\Access\User\UserRepository;
+use App\Http\Requests\Backend\Access\User\ManageUserRequest;
 
 /**
  * Class UserTableController.

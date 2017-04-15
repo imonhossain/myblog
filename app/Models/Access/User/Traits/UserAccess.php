@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Models\Access\User\Traits;
+namespace App\Models\Access\User\Traits;
 
 /**
  * Class UserAccess.

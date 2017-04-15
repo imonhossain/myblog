@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Providers;
+namespace App\Providers;
 
-use Myblog\Helpers\Macros\Macros;
+use App\Helpers\Macros\Macros;
 use Collective\Html\HtmlServiceProvider;
 
 /**

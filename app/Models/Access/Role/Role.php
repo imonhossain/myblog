@@ -1,12 +1,12 @@
 <?php
 
-namespace Myblog\Models\Access\Role;
+namespace App\Models\Access\Role;
 
 use Illuminate\Database\Eloquent\Model;
-use Myblog\Models\Access\Role\Traits\RoleAccess;
-use Myblog\Models\Access\Role\Traits\Scope\RoleScope;
-use Myblog\Models\Access\Role\Traits\Attribute\RoleAttribute;
-use Myblog\Models\Access\Role\Traits\Relationship\RoleRelationship;
+use App\Models\Access\Role\Traits\RoleAccess;
+use App\Models\Access\Role\Traits\Scope\RoleScope;
+use App\Models\Access\Role\Traits\Attribute\RoleAttribute;
+use App\Models\Access\Role\Traits\Relationship\RoleRelationship;
 
 /**
  * Class Role.

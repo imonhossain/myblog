@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Services\Access;
+namespace App\Services\Access;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 

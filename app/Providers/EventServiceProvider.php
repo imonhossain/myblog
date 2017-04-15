@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Providers;
+namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -29,7 +29,7 @@ class EventServiceProvider extends ServiceProvider
         /*
          * Auth Subscribers
          */
-        \Myblog\Listeners\Frontend\Auth\UserEventListener::class,
+        \App\Listeners\Frontend\Auth\UserEventListener::class,
 
         /*
          * Backend Subscribers
@@ -38,8 +38,8 @@ class EventServiceProvider extends ServiceProvider
         /*
          * Access Subscribers
          */
-        \Myblog\Listeners\Backend\Access\User\UserEventListener::class,
-        \Myblog\Listeners\Backend\Access\Role\RoleEventListener::class,
+        \App\Listeners\Backend\Access\User\UserEventListener::class,
+        \App\Listeners\Backend\Access\Role\RoleEventListener::class,
     ];
 
     /**

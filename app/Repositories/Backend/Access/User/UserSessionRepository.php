@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Repositories\Backend\Access\User;
+namespace App\Repositories\Backend\Access\User;
 
-use Myblog\Models\Access\User\User;
-use Myblog\Exceptions\GeneralException;
+use App\Models\Access\User\User;
+use App\Exceptions\GeneralException;
 
 /**
  * Class UserSessionRepository.

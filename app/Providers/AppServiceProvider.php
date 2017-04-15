@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Providers;
+namespace App\Providers;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Schema;

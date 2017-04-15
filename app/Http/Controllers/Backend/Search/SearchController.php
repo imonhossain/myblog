@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend\Search;
+namespace App\Http\Controllers\Backend\Search;
 
 use Illuminate\Http\Request;
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 /**
  * Class SearchController.

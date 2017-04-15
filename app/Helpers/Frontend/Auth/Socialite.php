@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Helpers\Frontend\Auth;
+namespace App\Helpers\Frontend\Auth;
 
 /**
  * Class Socialite.

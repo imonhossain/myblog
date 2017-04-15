@@ -1,14 +1,14 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
-use Myblog\Helpers\Auth\Auth;
+use App\Helpers\Auth\Auth;
 use Illuminate\Http\Request;
-use Myblog\Exceptions\GeneralException;
-use Myblog\Http\Controllers\Controller;
-use Myblog\Helpers\Frontend\Auth\Socialite;
-use Myblog\Events\Frontend\Auth\UserLoggedIn;
-use Myblog\Events\Frontend\Auth\UserLoggedOut;
+use App\Exceptions\GeneralException;
+use App\Http\Controllers\Controller;
+use App\Helpers\Frontend\Auth\Socialite;
+use App\Events\Frontend\Auth\UserLoggedIn;
+use App\Events\Frontend\Auth\UserLoggedOut;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 /**

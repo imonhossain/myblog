@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Myblog'),
+    'name' => env('APP_NAME', 'Laravel 5 Boilerplate'),
 
     /*
     |--------------------------------------------------------------------------
@@ -190,16 +190,16 @@ return [
         /*
          * Application Service Providers...
          */
-        Myblog\Providers\AccessServiceProvider::class,
-        Myblog\Providers\AppServiceProvider::class,
-        Myblog\Providers\AuthServiceProvider::class,
-        Myblog\Providers\BladeServiceProvider::class,
-        //Myblog\Providers\BroadcastServiceProvider::class,
-        Myblog\Providers\ComposerServiceProvider::class,
-        Myblog\Providers\EventServiceProvider::class,
-        Myblog\Providers\HistoryServiceProvider::class,
-        Myblog\Providers\MacroServiceProvider::class,
-        Myblog\Providers\RouteServiceProvider::class,
+        App\Providers\AccessServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        App\Providers\BladeServiceProvider::class,
+        //App\Providers\BroadcastServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\HistoryServiceProvider::class,
+        App\Providers\MacroServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 

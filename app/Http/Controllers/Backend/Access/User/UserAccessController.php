@@ -1,12 +1,12 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend\Access\User;
+namespace App\Http\Controllers\Backend\Access\User;
 
-use Myblog\Helpers\Auth\Auth;
-use Myblog\Models\Access\User\User;
-use Myblog\Exceptions\GeneralException;
-use Myblog\Http\Controllers\Controller;
-use Myblog\Http\Requests\Backend\Access\User\ManageUserRequest;
+use App\Helpers\Auth\Auth;
+use App\Models\Access\User\User;
+use App\Exceptions\GeneralException;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Backend\Access\User\ManageUserRequest;
 
 /**
  * Class UserAccessController.

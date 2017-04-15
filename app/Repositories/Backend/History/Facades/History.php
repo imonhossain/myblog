@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Repositories\Backend\History\Facades;
+namespace App\Repositories\Backend\History\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

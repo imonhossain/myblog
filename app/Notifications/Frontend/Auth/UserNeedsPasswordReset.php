@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Notifications\Frontend\Auth;
+namespace App\Notifications\Frontend\Auth;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;

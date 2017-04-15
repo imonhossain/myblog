@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Models\History;
+namespace App\Models\History;
 
 use Illuminate\Database\Eloquent\Model;
-use Myblog\Models\History\Traits\Relationship\HistoryRelationship;
+use App\Models\History\Traits\Relationship\HistoryRelationship;
 
 /**
  * Class History

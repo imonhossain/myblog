@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Requests\Backend\Access\Role;
+namespace App\Http\Requests\Backend\Access\Role;
 
-use Myblog\Http\Requests\Request;
+use App\Http\Requests\Request;
 
 /**
  * Class StoreRoleRequest.

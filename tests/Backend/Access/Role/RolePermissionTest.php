@@ -1,7 +1,7 @@
 <?php
 
 use Tests\BrowserKitTestCase;
-use Myblog\Models\Access\Permission\Permission;
+use App\Models\Access\Permission\Permission;
 
 class RolePermissionTest extends BrowserKitTestCase
 {

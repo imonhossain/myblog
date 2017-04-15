@@ -1,11 +1,11 @@
 <?php
 
-namespace Myblog\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Myblog\Repositories\Backend\History\HistoryContract;
-use Myblog\Repositories\Backend\History\EloquentHistoryRepository;
-use Myblog\Repositories\Backend\History\Facades\History as HistoryFacade;
+use App\Repositories\Backend\History\HistoryContract;
+use App\Repositories\Backend\History\EloquentHistoryRepository;
+use App\Repositories\Backend\History\Facades\History as HistoryFacade;
 
 /**
  * Class HistoryServiceProvider.

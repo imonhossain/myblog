@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Requests\Frontend\Auth;
+namespace App\Http\Requests\Frontend\Auth;
 
-use Myblog\Http\Requests\Request;
+use App\Http\Requests\Request;
 use Illuminate\Validation\Rule;
 
 /**

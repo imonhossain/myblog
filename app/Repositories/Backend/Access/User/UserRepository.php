@@ -1,22 +1,22 @@
 <?php
 
-namespace Myblog\Repositories\Backend\Access\User;
+namespace App\Repositories\Backend\Access\User;
 
-use Myblog\Models\Access\User\User;
+use App\Models\Access\User\User;
 use Illuminate\Support\Facades\DB;
-use Myblog\Exceptions\GeneralException;
-use Myblog\Repositories\BaseRepository;
+use App\Exceptions\GeneralException;
+use App\Repositories\BaseRepository;
 use Illuminate\Database\Eloquent\Model;
-use Myblog\Events\Backend\Access\User\UserCreated;
-use Myblog\Events\Backend\Access\User\UserDeleted;
-use Myblog\Events\Backend\Access\User\UserUpdated;
-use Myblog\Events\Backend\Access\User\UserRestored;
-use Myblog\Events\Backend\Access\User\UserDeactivated;
-use Myblog\Events\Backend\Access\User\UserReactivated;
-use Myblog\Events\Backend\Access\User\UserPasswordChanged;
-use Myblog\Repositories\Backend\Access\Role\RoleRepository;
-use Myblog\Events\Backend\Access\User\UserPermanentlyDeleted;
-use Myblog\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use App\Events\Backend\Access\User\UserCreated;
+use App\Events\Backend\Access\User\UserDeleted;
+use App\Events\Backend\Access\User\UserUpdated;
+use App\Events\Backend\Access\User\UserRestored;
+use App\Events\Backend\Access\User\UserDeactivated;
+use App\Events\Backend\Access\User\UserReactivated;
+use App\Events\Backend\Access\User\UserPasswordChanged;
+use App\Repositories\Backend\Access\Role\RoleRepository;
+use App\Events\Backend\Access\User\UserPermanentlyDeleted;
+use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class UserRepository.

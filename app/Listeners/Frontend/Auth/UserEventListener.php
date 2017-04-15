@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Listeners\Frontend\Auth;
+namespace App\Listeners\Frontend\Auth;
 
 /**
  * Class UserEventListener.
@@ -47,23 +47,23 @@ class UserEventListener
     public function subscribe($events)
     {
         $events->listen(
-            \Myblog\Events\Frontend\Auth\UserLoggedIn::class,
-            'Myblog\Listeners\Frontend\Auth\UserEventListener@onLoggedIn'
+            \App\Events\Frontend\Auth\UserLoggedIn::class,
+            'App\Listeners\Frontend\Auth\UserEventListener@onLoggedIn'
         );
 
         $events->listen(
-            \Myblog\Events\Frontend\Auth\UserLoggedOut::class,
-            'Myblog\Listeners\Frontend\Auth\UserEventListener@onLoggedOut'
+            \App\Events\Frontend\Auth\UserLoggedOut::class,
+            'App\Listeners\Frontend\Auth\UserEventListener@onLoggedOut'
         );
 
         $events->listen(
-            \Myblog\Events\Frontend\Auth\UserRegistered::class,
-            'Myblog\Listeners\Frontend\Auth\UserEventListener@onRegistered'
+            \App\Events\Frontend\Auth\UserRegistered::class,
+            'App\Listeners\Frontend\Auth\UserEventListener@onRegistered'
         );
 
         $events->listen(
-            \Myblog\Events\Frontend\Auth\UserConfirmed::class,
-            'Myblog\Listeners\Frontend\Auth\UserEventListener@onConfirmed'
+            \App\Events\Frontend\Auth\UserConfirmed::class,
+            'App\Listeners\Frontend\Auth\UserEventListener@onConfirmed'
         );
     }
 }

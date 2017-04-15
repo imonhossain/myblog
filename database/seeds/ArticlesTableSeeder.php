@@ -20,7 +20,7 @@ class ArticlesTableSeeder extends Seeder
         $this->disableForeignKeys();
 
         DB::table('articles')->truncate();
-        factory(Myblog\Models\Blog\Article::class, 3)->create();
+        factory(App\Models\Blog\Article::class, 3)->create();
 
         $this->enableForeignKeys();
 

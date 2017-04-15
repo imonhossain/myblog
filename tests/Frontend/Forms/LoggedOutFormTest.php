@@ -1,15 +1,15 @@
 <?php
 
 use Tests\BrowserKitTestCase;
-use Myblog\Models\Access\User\User;
+use App\Models\Access\User\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
-use Myblog\Events\Frontend\Auth\UserLoggedIn;
-use Myblog\Events\Frontend\Auth\UserRegistered;
+use App\Events\Frontend\Auth\UserLoggedIn;
+use App\Events\Frontend\Auth\UserRegistered;
 use Illuminate\Support\Facades\Notification;
-use Myblog\Notifications\Frontend\Auth\UserNeedsConfirmation;
-use Myblog\Notifications\Frontend\Auth\UserNeedsPasswordReset;
+use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use App\Notifications\Frontend\Auth\UserNeedsPasswordReset;
 
 /**
  * Class LoggedOutFormTest.

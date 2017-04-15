@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Helpers\Auth;
+namespace App\Helpers\Auth;
 
 /**
  * Class Auth.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Models\Access\Role\Traits\Scope;
+namespace App\Models\Access\Role\Traits\Scope;
 
 /**
  * Class RoleScope.

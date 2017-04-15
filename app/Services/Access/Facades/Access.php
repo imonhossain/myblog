@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Services\Access\Facades;
+namespace App\Services\Access\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Events\Backend\Access\Role;
+namespace App\Events\Backend\Access\Role;
 
 use Illuminate\Queue\SerializesModels;
 

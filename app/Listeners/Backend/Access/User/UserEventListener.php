@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Listeners\Backend\Access\User;
+namespace App\Listeners\Backend\Access\User;
 
 /**
  * Class UserEventListener.
@@ -145,43 +145,43 @@ class UserEventListener
     public function subscribe($events)
     {
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserCreated::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onCreated'
+            \App\Events\Backend\Access\User\UserCreated::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onCreated'
         );
 
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserUpdated::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onUpdated'
+            \App\Events\Backend\Access\User\UserUpdated::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onUpdated'
         );
 
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserDeleted::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onDeleted'
+            \App\Events\Backend\Access\User\UserDeleted::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onDeleted'
         );
 
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserRestored::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onRestored'
+            \App\Events\Backend\Access\User\UserRestored::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onRestored'
         );
 
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserPermanentlyDeleted::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onPermanentlyDeleted'
+            \App\Events\Backend\Access\User\UserPermanentlyDeleted::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onPermanentlyDeleted'
         );
 
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserPasswordChanged::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onPasswordChanged'
+            \App\Events\Backend\Access\User\UserPasswordChanged::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onPasswordChanged'
         );
 
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserDeactivated::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onDeactivated'
+            \App\Events\Backend\Access\User\UserDeactivated::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onDeactivated'
         );
 
         $events->listen(
-            \Myblog\Events\Backend\Access\User\UserReactivated::class,
-            'Myblog\Listeners\Backend\Access\User\UserEventListener@onReactivated'
+            \App\Events\Backend\Access\User\UserReactivated::class,
+            'App\Listeners\Backend\Access\User\UserEventListener@onReactivated'
         );
     }
 }

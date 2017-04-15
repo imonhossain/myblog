@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Requests\Frontend\User;
+namespace App\Http\Requests\Frontend\User;
 
-use Myblog\Http\Requests\Request;
+use App\Http\Requests\Request;
 
 /**
  * Class ChangePasswordRequest.

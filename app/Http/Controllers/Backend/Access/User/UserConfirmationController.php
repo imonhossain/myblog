@@ -1,11 +1,11 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend\Access\User;
+namespace App\Http\Controllers\Backend\Access\User;
 
-use Myblog\Models\Access\User\User;
-use Myblog\Http\Controllers\Controller;
-use Myblog\Notifications\Frontend\Auth\UserNeedsConfirmation;
-use Myblog\Http\Requests\Backend\Access\User\ManageUserRequest;
+use App\Models\Access\User\User;
+use App\Http\Controllers\Controller;
+use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use App\Http\Requests\Backend\Access\User\ManageUserRequest;
 
 /**
  * Class UserConfirmationController.

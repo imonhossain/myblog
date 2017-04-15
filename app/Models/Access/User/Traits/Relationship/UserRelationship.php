@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Models\Access\User\Traits\Relationship;
+namespace App\Models\Access\User\Traits\Relationship;
 
-use Myblog\Models\System\Session;
-use Myblog\Models\Access\User\SocialLogin;
+use App\Models\System\Session;
+use App\Models\Access\User\SocialLogin;
 
 /**
  * Class UserRelationship.

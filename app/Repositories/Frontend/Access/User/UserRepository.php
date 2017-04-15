@@ -1,16 +1,16 @@
 <?php
 
-namespace Myblog\Repositories\Frontend\Access\User;
+namespace App\Repositories\Frontend\Access\User;
 
-use Myblog\Models\Access\User\User;
+use App\Models\Access\User\User;
 use Illuminate\Support\Facades\DB;
-use Myblog\Exceptions\GeneralException;
-use Myblog\Repositories\BaseRepository;
+use App\Exceptions\GeneralException;
+use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Hash;
-use Myblog\Models\Access\User\SocialLogin;
-use Myblog\Events\Frontend\Auth\UserConfirmed;
-use Myblog\Repositories\Backend\Access\Role\RoleRepository;
-use Myblog\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use App\Models\Access\User\SocialLogin;
+use App\Events\Frontend\Auth\UserConfirmed;
+use App\Repositories\Backend\Access\Role\RoleRepository;
+use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class UserRepository.

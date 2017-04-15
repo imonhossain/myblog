@@ -1,46 +1,51 @@
-# Personal Blog Site
-This Project will cover creating a very simple blog. It will only consist of posts. The front-end will only be some pages, an index page to list all posts and a view page to view a post.
+## Laravel 5.4 Boilerplate
 
-There will be a backend control panel for managing posts and admins, this guide will also include a user authentication system to login administrators.
+[![Latest Stable Version](https://poser.pugx.org/rappasoft/laravel-5-boilerplate/v/stable)](https://packagist.org/packages/rappasoft/laravel-5-boilerplate) [![Latest Unstable Version](https://poser.pugx.org/rappasoft/laravel-5-boilerplate/v/unstable)](https://packagist.org/packages/rappasoft/laravel-5-boilerplate) [![StyleCI](https://styleci.io/repos/30171828/shield?style=plastic)](https://styleci.io/repos/30171828/shield?style=plastic)
 
-## Features
-- Laravel 5.4
-- PHP >= 5.6.4
-- Tokenizer PHP Extension
-- XML PHP Extension
-- Themes: Bootstrap
-- MySql
-- Keyboard support
+### Official Documentation
 
-## Installation
-```
-1. git clone https://github.com/mdshohelrana/myblog.git
-2. cd myblog
-3. composer install
-4. npm install or yarn
-5. copy .env.example .env
+[Click here for the official documentation](http://laravel-boilerplate.com)
 
-6. Create Database
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306 
-DB_DATABASE=myblog
-DB_USERNAME=root
-DB_PASSWORD=secret
+### Slack Channel
 
-7. Artisan Commands
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
+Please join us in our Slack channel to get faster responses to your questions. Get your invite here: https://laravel-5-boilerplate.herokuapp.com
 
-8. NPM Run '*'
-npm run <command>
+### Laravel 5.3
 
-9. PHPUnit
-phpunit
+You can download the last stable build of Laravel 5.3 [here](https://github.com/rappasoft/laravel-5-boilerplate/tree/Legacy_5.3).
 
-```
+### Laravel 5.2
 
-## Contributors
+You can download the last stable build of Laravel 5.2 [here](https://github.com/rappasoft/laravel-5-boilerplate/tree/Legacy_5.2).
 
-[<img alt="shohel rana" src="https://avatars1.githubusercontent.com/u/6725033?v=3&u=ee5df486d864c24c153d9b68bc7fac00b8b29403&s=400" width="117">](https://github.com/mdshohelrana)  [<img alt="eliyas5044" src="https://avatars1.githubusercontent.com/u/13916443?v=3&s=400" width="117">](https://github.com/eliyas5044)
+### Laravel 5.1
+
+You can download the last stable build of Laravel 5.1 [here](https://github.com/rappasoft/laravel-5-boilerplate/tree/Legacy_5.1).
+
+### Introduction
+
+Laravel Boilerplate provides you with a massive head start on any size web application. It comes with a full featured access control system out of the box with an easy to learn API and is built on a Twitter Bootstrap foundation with a front and backend architecture. We have put a lot of work into it and we hope it serves you well and saves you time!
+
+### Wiki
+
+Please view the [wiki](https://github.com/rappasoft/laravel-5-boilerplate/wiki) for a list of [features](https://github.com/rappasoft/laravel-5-boilerplate/wiki#features).
+
+### Issues
+
+If you come across any issues please [report them here](https://github.com/rappasoft/Laravel-5-Boilerplate/issues).
+
+### Contributing
+
+Thank you for considering contributing to the Laravel Boilerplate project! Please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Anthony Rappa at rappa819@gmail.com.
+
+### Security Vulnerabilities
+
+If you discover a security vulnerability within this boilerplate, please send an e-mail to Anthony Rappa at rappa819@gmail.com, or create a pull request if possible. All security vulnerabilities will be promptly addressed. Please reference [this page](https://github.com/rappasoft/laravel-5-boilerplate/wiki/7.-Security-Fixes) to make sure you are up to date.
+
+### Donations
+
+If you would like to help the continued efforts of this project, any size [donations](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=JJWUZ4E9S9SFG&lc=US&item_name=Laravel%205%20Boilerplate&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) are welcomed and highly appreciated.
+
+### License
+
+MIT: [http://anthony.mit-license.org](http://anthony.mit-license.org)

@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Models\Access\Permission\Traits\Relationship;
+namespace App\Models\Access\Permission\Traits\Relationship;
 
 /**
  * Class PermissionRelationship.

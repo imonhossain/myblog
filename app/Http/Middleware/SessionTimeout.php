@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Http\Middleware;
+namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Session\Store;

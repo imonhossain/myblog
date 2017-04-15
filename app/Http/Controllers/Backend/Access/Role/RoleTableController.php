@@ -1,11 +1,11 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend\Access\Role;
+namespace App\Http\Controllers\Backend\Access\Role;
 
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Yajra\Datatables\Facades\Datatables;
-use Myblog\Repositories\Backend\Access\Role\RoleRepository;
-use Myblog\Http\Requests\Backend\Access\Role\ManageRoleRequest;
+use App\Repositories\Backend\Access\Role\RoleRepository;
+use App\Http\Requests\Backend\Access\Role\ManageRoleRequest;
 
 /**
  * Class RoleTableController.

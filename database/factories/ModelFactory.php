@@ -68,7 +68,7 @@ $factory->state(Role::class, 'admin', function () {
     ];
 });
 
-$factory->define(Myblog\Models\Blog\Article::class, function ($faker) use ($factory) {
+$factory->define(App\Models\Blog\Article::class, function ($faker) use ($factory) {
 
     return [
         'author_id' => 1,

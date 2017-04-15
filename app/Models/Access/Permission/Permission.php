@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Models\Access\Permission;
+namespace App\Models\Access\Permission;
 
 use Illuminate\Database\Eloquent\Model;
-use Myblog\Models\Access\Permission\Traits\Relationship\PermissionRelationship;
+use App\Models\Access\Permission\Traits\Relationship\PermissionRelationship;
 
 /**
  * Class Permission.

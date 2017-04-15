@@ -33,7 +33,7 @@
             "database"
         ],
         "psr-4": {
-            "Myblog\\": "app/"
+            "App\\": "app/"
         },
         "files": [
             "app/helpers.php"

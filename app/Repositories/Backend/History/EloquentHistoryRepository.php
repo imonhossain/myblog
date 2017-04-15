@@ -1,10 +1,10 @@
 <?php
 
-namespace Myblog\Repositories\Backend\History;
+namespace App\Repositories\Backend\History;
 
-use Myblog\Models\History\History;
-use Myblog\Models\History\HistoryType;
-use Myblog\Exceptions\GeneralException;
+use App\Models\History\History;
+use App\Models\History\HistoryType;
+use App\Exceptions\GeneralException;
 
 /**
  * Class EloquentHistoryRepository.

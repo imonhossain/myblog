@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Providers;
+namespace App\Providers;
 
-use Myblog\Services\Access\Access;
+use App\Services\Access\Access;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -58,7 +58,7 @@ class AccessServiceProvider extends ServiceProvider
     {
         $this->app->booting(function () {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Access', \Myblog\Services\Access\Facades\Access::class);
+            $loader->alias('Access', \App\Services\Access\Facades\Access::class);
         });
     }
 

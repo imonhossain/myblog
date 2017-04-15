@@ -1,12 +1,12 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
-use Myblog\Http\Controllers\Controller;
-use Myblog\Events\Frontend\Auth\UserRegistered;
+use App\Http\Controllers\Controller;
+use App\Events\Frontend\Auth\UserRegistered;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Myblog\Http\Requests\Frontend\Auth\RegisterRequest;
-use Myblog\Repositories\Frontend\Access\User\UserRepository;
+use App\Http\Requests\Frontend\Auth\RegisterRequest;
+use App\Repositories\Frontend\Access\User\UserRepository;
 
 /**
  * Class RegisterController.

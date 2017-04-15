@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Events\Frontend\Auth;
+namespace App\Events\Frontend\Auth;
 
 use Illuminate\Queue\SerializesModels;
 

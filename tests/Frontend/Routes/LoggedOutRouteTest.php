@@ -1,12 +1,12 @@
 <?php
 
 use Tests\BrowserKitTestCase;
-use Myblog\Models\Access\User\User;
+use App\Models\Access\User\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Event;
-use Myblog\Events\Frontend\Auth\UserConfirmed;
+use App\Events\Frontend\Auth\UserConfirmed;
 use Illuminate\Support\Facades\Notification;
-use Myblog\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class LoggedOutRouteTest.

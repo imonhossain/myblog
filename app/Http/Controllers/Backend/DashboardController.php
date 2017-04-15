@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend;
 
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 /**
  * Class DashboardController.

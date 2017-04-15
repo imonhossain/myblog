@@ -1,8 +1,8 @@
 <?php
 
-namespace Myblog\Models\Access\User\Traits;
+namespace App\Models\Access\User\Traits;
 
-use Myblog\Notifications\Frontend\Auth\UserNeedsPasswordReset;
+use App\Notifications\Frontend\Auth\UserNeedsPasswordReset;
 
 /**
  * Class UserSendPasswordReset.

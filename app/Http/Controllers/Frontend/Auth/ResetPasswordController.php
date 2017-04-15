@@ -1,11 +1,11 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
 use Illuminate\Http\Request;
-use Myblog\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-use Myblog\Repositories\Frontend\Access\User\UserRepository;
+use App\Repositories\Frontend\Access\User\UserRepository;
 
 /**
  * Class ResetPasswordController.

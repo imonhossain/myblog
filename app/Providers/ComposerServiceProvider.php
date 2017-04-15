@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\Facades\View;
-use Myblog\Http\Composers\GlobalComposer;
+use App\Http\Composers\GlobalComposer;
 use Illuminate\Support\ServiceProvider;
 
 /**

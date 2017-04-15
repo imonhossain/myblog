@@ -1,10 +1,10 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\User;
+namespace App\Http\Controllers\Frontend\User;
 
-use Myblog\Http\Controllers\Controller;
-use Myblog\Http\Requests\Frontend\User\UpdateProfileRequest;
-use Myblog\Repositories\Frontend\Access\User\UserRepository;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Frontend\User\UpdateProfileRequest;
+use App\Repositories\Frontend\Access\User\UserRepository;
 
 /**
  * Class ProfileController.

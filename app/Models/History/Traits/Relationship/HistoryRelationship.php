@@ -1,9 +1,9 @@
 <?php
 
-namespace Myblog\Models\History\Traits\Relationship;
+namespace App\Models\History\Traits\Relationship;
 
-use Myblog\Models\Access\User\User;
-use Myblog\Models\History\HistoryType;
+use App\Models\Access\User\User;
+use App\Models\History\HistoryType;
 
 /**
  * Class HistoryRelationship.

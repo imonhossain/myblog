@@ -1,6 +1,6 @@
 <?php
 
-namespace Myblog\Repositories;
+namespace App\Repositories;
 
 /**
  * Class BaseRepository.

@@ -1,15 +1,15 @@
 <?php
 
-namespace Myblog\Repositories\Backend\Access\Role;
+namespace App\Repositories\Backend\Access\Role;
 
-use Myblog\Models\Access\Role\Role;
+use App\Models\Access\Role\Role;
 use Illuminate\Support\Facades\DB;
-use Myblog\Exceptions\GeneralException;
-use Myblog\Repositories\BaseRepository;
+use App\Exceptions\GeneralException;
+use App\Repositories\BaseRepository;
 use Illuminate\Database\Eloquent\Model;
-use Myblog\Events\Backend\Access\Role\RoleCreated;
-use Myblog\Events\Backend\Access\Role\RoleDeleted;
-use Myblog\Events\Backend\Access\Role\RoleUpdated;
+use App\Events\Backend\Access\Role\RoleCreated;
+use App\Events\Backend\Access\Role\RoleDeleted;
+use App\Events\Backend\Access\Role\RoleUpdated;
 
 /**
  * Class RoleRepository.

@@ -1,11 +1,11 @@
 <?php
 
-namespace Myblog\Http\Controllers\Backend\Access\User;
+namespace App\Http\Controllers\Backend\Access\User;
 
-use Myblog\Models\Access\User\User;
-use Myblog\Http\Controllers\Controller;
-use Myblog\Repositories\Backend\Access\User\UserRepository;
-use Myblog\Http\Requests\Backend\Access\User\ManageUserRequest;
+use App\Models\Access\User\User;
+use App\Http\Controllers\Controller;
+use App\Repositories\Backend\Access\User\UserRepository;
+use App\Http\Requests\Backend\Access\User\ManageUserRequest;
 
 /**
  * Class UserStatusController.

@@ -2,7 +2,7 @@
 
 use Database\TruncateTable;
 use Illuminate\Database\Seeder;
-use Myblog\Models\Access\Role\Role;
+use App\Models\Access\Role\Role;
 use Database\DisableForeignKeys;
 
 /**

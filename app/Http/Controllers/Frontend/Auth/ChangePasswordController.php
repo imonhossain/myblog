@@ -1,10 +1,10 @@
 <?php
 
-namespace Myblog\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
-use Myblog\Http\Controllers\Controller;
-use Myblog\Repositories\Frontend\Access\User\UserRepository;
-use Myblog\Http\Requests\Frontend\User\ChangePasswordRequest;
+use App\Http\Controllers\Controller;
+use App\Repositories\Frontend\Access\User\UserRepository;
+use App\Http\Requests\Frontend\User\ChangePasswordRequest;
 
 /**
  * Class ChangePasswordController.
