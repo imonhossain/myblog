@@ -1,9 +1,9 @@
-@extends('layouts.backend')
+@extends('backend.layouts.app')
 
-@section('backend-content')
+@section('content')
     <h2>Categories
         &nbsp;
-        <a class="btn btn-primary" href="{{url('dashboard/categories/create')}}">
+        <a class="btn btn-primary" href="{{url('admin/categories/create')}}">
             <i class="glyphicon glyphicon-plus"></i> Add New Category
         </a>
     </h2>
@@ -27,12 +27,12 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->slug }}</td>
-                        <td>{{ $category->articles_count }}</td>
-                        <td>{{ $category->created_at->format('d M Y') }}</td>
+                        <td></td>
+                        <td></td>
                         <td>
-                            <a href="{{url('dashboard/categories/'.$category->id.'/edit')}}" id="edit-category-{{$category->id}}"  class="btn btn-primary"><i class="edit icon"></i> Edit</a>
+                            <a href="{{url('admin/categories/'.$category->id.'/edit')}}" id="edit-category-{{$category->id}}"  class="btn btn-primary"><i class="edit icon"></i> Edit</a>
                             @if(Auth::user()->hasRole('admin'))
-                                <form class="form-inline" method="POST" action="/dashboard/categories/{{$category->id}}">
+                                <form class="form-inline" method="POST" action="/admin/categories/{{$category->id}}">
                                     {{csrf_field()}}
                                     <input name="_method" type="hidden" value="DELETE">
                                     <button class="btn btn-danger" id="delete-category-{{$category->id}}" type="submit"><i class="fa fa-trash"></i> Delete</button>

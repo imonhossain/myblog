@@ -14,16 +14,33 @@ There will be a backend control panel for managing posts and admins, this guide 
 
 ## Installation
 ```
-git clone https://github.com/mdshohelrana/myblog.git
-cd myblog
-composer install
-copy .env.example .env
+1. git clone https://github.com/mdshohelrana/myblog.git
+2. cd myblog
+3. composer install
+4. npm install or yarn
+5. copy .env.example .env
+
+6. Create Database
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306 
+DB_DATABASE=myblog
+DB_USERNAME=root
+DB_PASSWORD=secret
+
+7. Artisan Commands
 php artisan key:generate
 php artisan migrate
 php artisan db:seed
+
+8. NPM Run '*'
+npm run <command>
+
+9. PHPUnit
+phpunit
+
 ```
 
 ## Contributors
 
 [<img alt="shohel rana" src="https://avatars1.githubusercontent.com/u/6725033?v=3&u=ee5df486d864c24c153d9b68bc7fac00b8b29403&s=400" width="117">](https://github.com/mdshohelrana)  [<img alt="eliyas5044" src="https://avatars1.githubusercontent.com/u/13916443?v=3&s=400" width="117">](https://github.com/eliyas5044)
-

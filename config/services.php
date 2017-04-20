@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Access\User\User;
+
 return [
 
     /*
@@ -30,57 +32,77 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\Models\User::class,
+        'model' => User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    /*
+     * Socialite Credentials
+     * Redirect URL's need to be the same as specified on each network you set up this application on
+     * as well as conform to the route:
+     * http://localhost/public/login/SERVICE
+     * Where service can github, facebook, twitter, google, linkedin, or bitbucket
+     * Docs: https://github.com/laravel/socialite
+     * Make sure 'scopes' and 'with' are arrays, if their are none, use empty arrays []
+     */
+    'bitbucket' => [
+        'client_id'     => env('BITBUCKET_CLIENT_ID'),
+        'client_secret' => env('BITBUCKET_CLIENT_SECRET'),
+        'redirect'      => env('BITBUCKET_REDIRECT'),
+        'scopes'        => [],
+        'with'          => [],
+    ],
+
     'facebook' => [
-        'client_id'     => env('FB_ID'),
-        'client_secret' => env('FB_SECRET'),
-        'redirect'      => env('FB_REDIRECT')
-    ],
-
-    'twitter' => [
-        'client_id'     => env('TW_ID'),
-        'client_secret' => env('TW_SECRET'),
-        'redirect'      => env('TW_REDIRECT')
-    ],
-
-    'google' => [
-        'client_id'     => env('GOOGLE_ID'),
-        'client_secret' => env('GOOGLE_SECRET'),
-        'redirect'      => env('GOOGLE_REDIRECT')
+        'client_id'     => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect'      => env('FACEBOOK_REDIRECT'),
+        'scopes'        => [],
+        'with'          => [],
+        'fields'        => [],
     ],
 
     'github' => [
-        'client_id'     => env('GITHUB_ID'),
-        'client_secret' => env('GITHUB_SECRET'),
-        'redirect'      => env('GITHUB_REDIRECT')
+        'client_id'     => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect'      => env('GITHUB_REDIRECT'),
+        'scopes'        => [],
+        'with'          => [],
     ],
 
-    'youtube' => [
-        'client_id'     => env('YOUTUBE_KEY'),
-        'client_secret' => env('YOUTUBE_SECRET'),
-        'redirect'      => env('YOUTUBE_REDIRECT_URI'),
+    'google' => [
+        'client_id'     => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect'      => env('GOOGLE_REDIRECT'),
+
+        /*
+         * Only allows google to grab email address
+         * Default scopes array also has: 'https://www.googleapis.com/auth/plus.login'
+         * https://medium.com/@njovin/fixing-laravel-socialite-s-google-permissions-2b0ef8c18205
+         */
+        'scopes' => [
+            'https://www.googleapis.com/auth/plus.me',
+            'https://www.googleapis.com/auth/plus.profile.emails.read',
+        ],
+
+        'with' => [],
     ],
 
-    'twitch' => [
-        'client_id'     => env('TWITCH_KEY'),
-        'client_secret' => env('TWITCH_SECRET'),
-        'redirect'      => env('TWITCH_REDIRECT_URI'),
+    'linkedin' => [
+        'client_id'     => env('LINKEDIN_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
+        'redirect'      => env('LINKEDIN_REDIRECT'),
+        'scopes'        => [],
+        'with'          => [],
+        'fields'        => [],
     ],
 
-    'instagram' => [
-        'client_id'     => env('INSTAGRAM_KEY'),
-        'client_secret' => env('INSTAGRAM_SECRET'),
-        'redirect'      => env('INSTAGRAM_REDIRECT_URI'),
+    'twitter' => [
+        'client_id'     => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect'      => env('TWITTER_REDIRECT'),
+        'scopes'        => [],
+        'with'          => [],
     ],
-
-    '37signals' => [
-        'client_id'     => env('37SIGNALS_KEY'),
-        'client_secret' => env('37SIGNALS_SECRET'),
-        'redirect'      => env('37SIGNALS_REDIRECT_URI'),
-    ],
-
 ];

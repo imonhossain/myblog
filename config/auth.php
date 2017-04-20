@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Access\User\User;
+
 return [
 
     /*
@@ -45,16 +47,6 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
-
-        'user' => [
-            'driver' => 'session',
-            'provider' => 'users'
-        ],
-
-        'administrator' => [
-            'driver' => 'session',
-            'provider' => 'users'
-        ],
     ],
 
     /*
@@ -77,7 +69,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => User::class,
         ],
 
         // 'users' => [

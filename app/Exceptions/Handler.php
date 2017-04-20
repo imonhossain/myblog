@@ -3,8 +3,8 @@
 namespace App\Exceptions;
 
 use Exception;
-use Illuminate\Http\Request;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Session\TokenMismatchException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -45,14 +45,19 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        /*
+         * Redirect if token mismatch error
+         * Usually because user stayed on the same screen too long and their session expired
+         */
+        if ($exception instanceof TokenMismatchException) {
+            return redirect()->route('frontend.auth.login');
+        }
 
-// Add LOG HERE
-        if ($exception instanceof \jeremykenedy\LaravelRoles\Exceptions\LevelDeniedException) {
-
-// ADD FLASH AND REDIRECT HERE
-
-            return redirect()->back();
-
+        /*
+         * All instances of GeneralException redirect back with a flash message to show a bootstrap alert-error
+         */
+        if ($exception instanceof GeneralException) {
+            return redirect()->back()->withInput()->withFlashDanger($exception->getMessage());
         }
 
         return parent::render($request, $exception);
@@ -71,6 +76,6 @@ class Handler extends ExceptionHandler
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
 
-        return redirect()->guest(route('login'));
+        return redirect()->guest(route('frontend.auth.login'));
     }
 }

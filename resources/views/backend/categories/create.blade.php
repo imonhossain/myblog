@@ -1,9 +1,9 @@
-@extends('layouts.backend')
+@extends('backend.layouts.app')
 
-@section('backend-content')
+@section('content')
     <h2>Create New Category</h2>
 
-    {{ Form::open(['url'=>'dashboard/categories']) }}
+    {{ Form::open(['url'=>'admin/categories']) }}
     <div class="form-group">
         {{ Form::label('name', 'Name:') }}
         {{ Form::text('name', null, ['class'=>'form-control']) }}
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <button class="btn btn-primary" type="submit">Create</button>
-        <a href="{{url('dashboard/categories')}}" class="btn btn-warning" role="button">Cancel</a>
+        <a href="{{url('admin/categories')}}" class="btn btn-warning" role="button">Cancel</a>
     </div>
     {{ Form::close() }}
 
