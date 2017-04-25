@@ -23,7 +23,7 @@
         @yield('template_linked_fonts')
 
         {{-- Styles --}}
-        <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+        @yield('style')
 
         @yield('template_linked_css')
 

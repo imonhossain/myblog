@@ -13,7 +13,7 @@
 
       <div class="ui teal ribbon label z-index-top">
         <a href="{{ url('categories/'.$article->category->slug) }}" class="white-font">{{$article->category_name}}</a>
-      </div><!--end of category-name-->
+      </div><!--endCategorygory-name-->
 
 
 

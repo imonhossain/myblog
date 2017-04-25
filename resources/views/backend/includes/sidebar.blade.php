@@ -5,12 +5,14 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ access()->user()->picture }}" class="img-circle" alt="User Image" />
+                <img src="{{ access()->user()->picture }}" class="img-circle" alt="User Image"/>
             </div><!--pull-left-->
             <div class="pull-left info">
                 <p>{{ access()->user()->name }}</p>
                 <!-- Status -->
-                <a href="#"><i class="fa fa-circle text-success"></i> {{ trans('strings.backend.general.status.online') }}</a>
+                <a href="#"><i
+                            class="fa fa-circle text-success"></i> {{ trans('strings.backend.general.status.online') }}
+                </a>
             </div><!--pull-left-->
         </div><!--user-panel-->
 
@@ -47,7 +49,8 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
 
-                <ul class="treeview-menu {{ active_class(Active::checkUriPattern('admin/access/*'), 'menu-open') }}" style="display: none; {{ active_class(Active::checkUriPattern('admin/access/*'), 'display: block;') }}">
+                <ul class="treeview-menu {{ active_class(Active::checkUriPattern('admin/access/*'), 'menu-open') }}"
+                    style="display: none; {{ active_class(Active::checkUriPattern('admin/access/*'), 'display: block;') }}">
                     <li class="{{ active_class(Active::checkUriPattern('admin/access/user*')) }}">
                         <a href="{{ route('admin.access.user.index') }}">
                             <i class="fa fa-circle-o"></i>
@@ -63,6 +66,20 @@
                     </li>
                 </ul>
             </li>
+            <li class="{{ active_class(Active::checkUriPattern('admin/categories')) }}">
+                <a href="{{ url('admin/categories') }}">
+                    <i class="fa fa-list"></i>
+                    <span>{{ trans('menus.backend.sidebar.categories.all') }}</span>
+                </a>
+                <ul class="treeview-menu {{ active_class(Active::checkUriPattern('admin/categories/*'), 'menu-open') }}" style="display: none; {{ active_class(Active::checkUriPattern('admin/access/*'), 'display: block;') }}">
+                    <li class="{{ active_class(Active::checkUriPattern('admin/categories/create')) }}">
+                        <a href="{{ url('admin/categories/create') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>{{ trans('menus.backend.sidebar.categories.create') }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             @endauth
 
             <li class="{{ active_class(Active::checkUriPattern('admin/log-viewer*')) }} treeview">
@@ -71,7 +88,8 @@
                     <span>{{ trans('menus.backend.log-viewer.main') }}</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
-                <ul class="treeview-menu {{ active_class(Active::checkUriPattern('admin/log-viewer*'), 'menu-open') }}" style="display: none; {{ active_class(Active::checkUriPattern('admin/log-viewer*'), 'display: block;') }}">
+                <ul class="treeview-menu {{ active_class(Active::checkUriPattern('admin/log-viewer*'), 'menu-open') }}"
+                    style="display: none; {{ active_class(Active::checkUriPattern('admin/log-viewer*'), 'display: block;') }}">
                     <li class="{{ active_class(Active::checkUriPattern('admin/log-viewer')) }}">
                         <a href="{{ route('log-viewer::dashboard') }}">
                             <i class="fa fa-circle-o"></i>

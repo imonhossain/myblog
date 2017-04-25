@@ -20,6 +20,10 @@ class Article extends Model
     protected $dates = ['published_at'];
     protected $append = ['author_name'];
 
+    public function category(){
+        return $this->belongsTo('App\Models\Blog\Article');
+    }
+
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);

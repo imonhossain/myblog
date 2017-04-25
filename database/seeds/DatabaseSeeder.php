@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(AccessTableSeeder::class);
         $this->call(HistoryTypeTableSeeder::class);
-        $this->call(ArticlesTableSeeder::class);
+        //$this->call(ArticlesTableSeeder::class);
 
         Model::reguard();
     }

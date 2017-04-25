@@ -47,6 +47,11 @@ return [
             'dashboard' => 'Dashboard',
             'general'   => 'General',
             'system'    => 'System',
+            'categories' => [
+                'all' => 'Categories',
+                'create' => 'Create',
+                'edit' => 'Edit'
+            ]
         ],
     ],
 

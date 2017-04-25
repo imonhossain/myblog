@@ -17,8 +17,6 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('author_id')->nullable();
             $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('slug')->unique()->nullable();
             $table->string('title')->nullable();
             $table->string('subtitle')->nullable();
